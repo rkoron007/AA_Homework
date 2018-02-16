@@ -66,7 +66,7 @@ class Map
   end
 
   def show
-    p @current_map
+    print @current_map
   end
 
 end
