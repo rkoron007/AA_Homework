@@ -78,6 +78,3 @@ class Simon
     end
   end
 end
-
-party = Simon.new
-party.play
