@@ -1,0 +1,8 @@
+<h1>Look at this cool band!</h1>
+<h1> <%= @band.name %> </h1>
+<form action="<%= band_url(@band) %>" method="post">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete Band">
+</form>
+<a href="<%= edit_band_url(@band) %>"> Edit This Band</a>
+</form>

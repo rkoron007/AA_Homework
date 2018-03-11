@@ -1,0 +1,27 @@
+<h1>Make a Mistake?</h1>
+<form action="<%= album_url(@album) %>" method='post'>
+  <input type="hidden" name="_method"  value= 'patch'>
+
+<label for="albumtitle">Album Title</label>
+<input type="text" name="album[title]" id="albumtitle" value='<%= @album.title %>'>
+<br>
+<label for="albumyear">Year Recorded
+<input type="text" name="album[year]"value='<%= @album.year %>'></label>
+<br>
+<label for="recordedlive">Recorded Live?</label>
+<input type="radio" name="album[recorded]" value='true'<%= @album.recorded == "true" ? "checked" : "" %>> True
+<input type="radio" name="album[recorded]" value='false'<%= @album.recorded == "false" ? "checked" : "" %>> False
+<br>
+
+<label for="bandid">Band Who Recorded This?</label>
+<select name="album[band_id]" id="bandid">
+<% Band.find_each do |band| %>
+<option
+<%= @album.band_id == band.id ? "selected" : "" %>
+value='<%=band.id%>'><%=band.name%>
+</option>
+<%end%>
+</select>
+
+<input type="submit" value='ChangeYourPoorAlbum'>
+</form>

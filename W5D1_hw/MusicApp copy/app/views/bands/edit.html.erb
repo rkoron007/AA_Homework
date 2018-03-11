@@ -1,0 +1,8 @@
+<h1>Change Your Band!</h1>
+<form action="<%= band_url(@band) %>" method='post'>
+  <input type="hidden" name="_method"  value= 'patch'>
+
+<label for="bandname">Band Name</label>
+<input type="text" name="band[name]" id="bandname" value='<%= @band.name %>'>
+<input type="submit" value='ChangeYourPoorBand'>
+</form>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<link
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <header>
+  <% if current_user.nil? %>
+    <%= link_to 'Sign in', new_session_url %>
+    <%= link_to 'Sign up', new_user_url %>
+  <% else %>
+    <%= current_user.email %>
+    <%= button_to 'Logout', session_url, method: :delete %>
+  <% end %>
+
+  <h1> Welcome to MusicApp: The App that Snaps!</h1>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<h1>Album Page for: <%= @album.title%> </h1>
+
+<p>Album Title: <%= @album.title%> </p>
+<p>Year Recorded: <%= @album.year%> </p>
+<% if @album.recorded %>
+<p>This album was recorded live.</p>
+<% elsif %>
+<p>This was a studio recording.</p>
+<% end %>
