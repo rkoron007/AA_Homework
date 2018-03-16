@@ -1,4 +1,4 @@
-  function titleize(array,callback){
+  function titleize(array, callback){
     let titlized = array.map(name =>`Mx. ${name} Jingleheimer Schmidt`);
     callback(titlized)};
   };
