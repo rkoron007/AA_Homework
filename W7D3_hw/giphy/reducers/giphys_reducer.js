@@ -5,6 +5,8 @@ const giphysReducer = (state = [], action) => {
     case RECEIVE_SEARCH_GIPHYS:
       return action.giphys;
     default:
-    return state;
+      return state;
   }
 };
+
+export default giphysReducer;
